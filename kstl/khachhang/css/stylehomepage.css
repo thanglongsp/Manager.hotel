@@ -1,0 +1,88 @@
+<DOCTYPE html>
+<html>
+<head>
+<title>Trang chủ</title>
+    <meta charset="utf-8">
+<style>
+body{
+    font-family: Arial, Tahoma;
+    font-size: 12px;
+}
+
+ 
+#main{
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+#head{
+    height: 100px;
+    border: 1px solid #CDCDCD;
+    background-color: #00FFFF;
+    margin-bottom:5px;
+}
+#head-link{
+     height: 30px;
+     line-height: 30px;
+     padding-left: 10px;
+     padding-right: 10px;
+     border: 1px solid #CDCDCD;
+     background-color: #00FFFF;
+     margin-bottom:5px;
+     clear: both;
+}
+#left{
+     width: 200px;
+     height: 100%;
+     border: 1px solid #CDCDCD;
+     float:left;
+     background-color: #00FFFF;
+     margin-bottom: 5px;
+}
+#content{
+     width: auto;
+     height: auto;
+     border: 1px solid #CDCDCD;
+     background-color:#F0FFF0; 
+     float:left;
+     margin-left: 5px;
+     margin-right: 5px;
+     margin-bottom: 5px;
+}
+#right{
+     width: 200px;
+     height:100%;
+     border: 1px solid #CDCDCD;
+     background-color: #00FFFF;
+     float:right;
+     margin-bottom: 5px;
+}
+#footer{
+     width: auto;
+     height: 100px;
+     clear: both;
+     border: 1px solid #CDCDCD;
+     background-color: #00FFFF;
+     text-align: center;
+}
+.button {
+    background-color: #00FFFF;
+    border: none;
+    color: red;
+    padding: 3px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+img 
+    {
+    border-radius: 8px;
+    }
+
+</style>
+</head>
