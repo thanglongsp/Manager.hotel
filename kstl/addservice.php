@@ -117,8 +117,8 @@ $hoten = $_SESSION['hoten'];
 
             }
 
-                    $sql = "SELECT madv, tendv, loaidv , (dongia||'đ') as dongia FROM dichvu order by madv ";
-        $result = pg_query($db, $sql);
+            $sql = "SELECT madv, tendv, loaidv , (dongia||'đ') as dongia FROM dichvu order by madv ";
+            $result = pg_query($db, $sql);
 
         if(!$result)
             {

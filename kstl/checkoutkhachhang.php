@@ -84,17 +84,15 @@ $hoten = $_SESSION['hoten'];
 
 $query = "SELECT * FROM khachhang WHERE makh = '".$_REQUEST['ID']. "'" ;
 
-$query2 ="
-SELECT makh , map ,tenp, loaip , ngayden , ngaydi , songaythue, gia , (gia*songaythue) as tienphong,tiendat
-from
-khachhang as kh natural join sudungphong as sdp natural join phong as p natural join thuephong as tp
-where makh = '$makh'
-group by makh , ngayden , ngaydi , songaythue ,gia , map,tenp, loaip, tiendat
-order by makh asc
-";
+$query2 ="SELECT makh , map ,tenp, loaip , ngayden , ngaydi , songaythue, gia , (gia*songaythue) as tienphong,tiendat
+        from
+        khachhang as kh natural join sudungphong as sdp natural join phong as p natural join thuephong as tp
+        where makh = '$makh'
+        group by makh , ngayden , ngaydi , songaythue ,gia , map,tenp, loaip, tiendat
+        order by makh asc
+        ";
 
-$query3 ="
-SELECT sddv.makh , sum(dongia*soluong) as tiendichvu
+$query3 ="SELECT sddv.makh , sum(dongia*soluong) as tiendichvu
 FROM sudungdichvu as sddv natural join dichvu as dv
 where sddv.makh = '$makh'
 group by sddv.makh
@@ -109,12 +107,9 @@ group by kh.makh , dv.madv , ngaysd , soluong
 order by makh asc 
 ";
 
-$q4 = "Select mapcu , mapmoi, ngaydoi from doiphong where makh = '$makh' order by ngaydoi ";
+$q4 = "SELECT mapcu , mapmoi, ngaydoi from doiphong where makh = '$makh' order by ngaydoi ";
 $q5 = "SELECT magopy,clp,cldv,tdnv,gopykhac from gopy where makh = '$makh' order by magopy ";
 
-
-
-                         
                         $result = pg_query($query);
                         $result2 = pg_query($query2);
                         $result3 = pg_query($query3);
@@ -151,9 +146,6 @@ $q5 = "SELECT magopy,clp,cldv,tdnv,gopykhac from gopy where makh = '$makh' order
                             $tiendat = $row["tiendat"];
 
                         }
-
-
-
 
                          $tongtien = $tienp + $tiendv;
                          $tienthue = $tongtien/10;

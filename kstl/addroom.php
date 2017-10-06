@@ -48,8 +48,8 @@ $hoten = $_SESSION['hoten'];
     	    <?php
        $host        = "host=127.0.0.1";
        $port        = "port=5432";
-       $dbname      = "dbname=qlks";
-       $credentials = "user=postgres password='thanglongsp'";
+       $dbname      = "dbname=qlkstloff3";
+       $credentials = "user=postgres password=''";
        $db = pg_connect( "$host $port $dbname $credentials"  );
            if(!$db)
                {
@@ -59,7 +59,6 @@ $hoten = $_SESSION['hoten'];
 
         $sql = "SELECT * FROM phong order by map asc ";
         $result = pg_query($db, $sql);
-
         if(!$result)
             {
                  die('Query error: [' . $db->error . ']');
@@ -143,7 +142,7 @@ $hoten = $_SESSION['hoten'];
 
             }
 
-                    $sql = "SELECT map , tenp , loaip, (gia||'đ') as gia , trangthai FROM phong order by map asc ";
+        $sql = "SELECT map , tenp , loaip, (gia||'đ') as gia , trangthai FROM phong order by map asc ";
         $result = pg_query($db, $sql);
 
         if(!$result)
@@ -174,8 +173,7 @@ $hoten = $_SESSION['hoten'];
               
                   $b = 0 ;
                   
-                  while ($row = pg_fetch_array($result)) :
-                  $b = $b + 1 ; ?>
+                  while ($row = pg_fetch_array($result)) : $b = $b + 1 ; ?>
                   <tr>
 
                       <td><?php echo "".$b."" ?></td>
