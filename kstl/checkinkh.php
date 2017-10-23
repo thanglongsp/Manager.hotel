@@ -97,7 +97,7 @@ $hoten = $_SESSION['hoten'];
 
     <tr>
     <td>Số CMND :  </td>
-    <td><input type="text" name="cmnd"/ placeholder="Ví dụ : 123456789"><br /> </td>
+    <td><input type="text" name="cmnd" placeholder="Ví dụ : 123456789"><br /> </td>
     </tr>
 
     <tr>
